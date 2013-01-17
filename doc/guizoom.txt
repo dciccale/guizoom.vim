@@ -1,0 +1,78 @@
+*guizoom.txt* guizoom.vim easy increase or decrease gui font size    *guizoom*
+
+CONTENTS ~
+                                                                   *guizoom-contents*
+
+==============================================================================
+
+1. About                                                           |guizoom-about|
+2. Installation                                                    |guizoom-installation|
+  2.1 Install with Pathogen                                        |guizoom-pathogen|
+  2.2 Install with Vundle                                          |guizoom-vundle|
+  2.3 Install normally                                             |guizoom-normally|
+3. Commands                                                        |guizoom-commands|
+  3.1 ZoomIn                                                       |guizoom-zoomin|
+  3.2 ZoomOut                                                      |guizoom-zoomout|
+  3.3 ZoomReset                                                    |guizoom-zoomreset|
+4. Mappings                                                        |guizoom-mappings|
+
+==============================================================================
+
+ABOUT                                                              *guizoom-about*
+
+guizoom.vim is a plugin to easy increase or decrease vim gui font size.
+
+This plugin is for GUI version only
+
+2. INSTALLATION ~
+                                                                   *guizoom-installation*
+
+2.1 Install with Pathogen                                          *guizoom-pathogen*
+1) cd ~/.vim/bundle
+2) git clone git://github.com/dciccale/guizoom.vim.git
+
+2.2 Install with Vundle                                            *guizoom-vundle*
+1) Bundle 'dciccale/guizoom.vim'
+2) run >
+
+  :BundleInstall
+
+
+2.3 Install normally                                               *guizoom-normally*
+1) Copy |guizoom.vim| script to $HOME/.vim/plugin directory or $HOME/vimfiles/plugin (see |add-global-plugin|)
+2) Restart Vim
+
+3. COMMANDS ~
+                                                                   *guizoom-commands*
+3.1 ZoomIn                                                         *guizoom-zoomin* *ZoomIn*
+
+run >
+  :ZoomIn
+
+increase font size
+
+3.2 ZoomOut                                                        *guizoom-zoomout* *ZoomOut*
+
+run >
+  :ZoomOut
+
+decrease font size
+
+3.3 ZoomReset                                                      *guizoom-zoomreset* *ZoomReset*
+
+run >
+  :ZoomReset
+
+reset font size to default
+
+4. MAPPINGS ~
+                                                                   *guizoom-mappings*
+Custom mappins:
+
+You could map guizoom plugin like this in your .vimrc >
+  nmap <Leader>+ :ZoomIn<CR>
+  nmap <Leader>- :ZoomOut<CR>
+  nmap <Leader>= :ZoomReset<CR>
+
+
+vim:tw=78:ts=8:ft=help:norl:
