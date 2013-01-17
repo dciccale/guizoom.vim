@@ -1,0 +1,1 @@
+# guizoom.vim
