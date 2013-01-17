@@ -23,9 +23,9 @@ For normal installation (not recommended) run `:h guizoom-normal-install` in vim
 
 ## Usage
 
-`:ZoomIn` to increase font size
-`:ZoomOut` to decrease font size
-`:ZoomReset` to reset font size to default (keeping original windows size)
+- `:ZoomIn` to increase font size
+- `:ZoomOut` to decrease font size
+- `:ZoomReset` to reset font size to default (keeping original windows size)
 
 ### Mappings
 
