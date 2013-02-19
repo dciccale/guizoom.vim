@@ -13,7 +13,7 @@ let s:currentFont = &guifont
 let s:currentWindowSize = [&lines, &columns]
 
 " keep track of last window size
-autocmd VimResized * let s:currentWindowSize = [&lines, &columns]
+autocmd! VimResized * let s:currentWindowSize = [&lines, &columns]
 
 " command
 com! -narg=0 ZoomIn :call s:Zoom(1)
@@ -22,7 +22,7 @@ com! -narg=0 ZoomReset :call s:ZoomReset()
 
 " Zooming function
 function! s:Zoom(amount)
-  " regex to get current font
+  " regex to match current font size
   let l:fsRegex = ':h\([^:]*\)'
 
   " get actual font size
@@ -37,7 +37,7 @@ endfunction
 
 " reset font size
 function! s:ZoomReset()
-  " restore font size
+  " restore original font size
   let &guifont = s:currentFont
 
   " restore window size
