@@ -17,11 +17,11 @@ autocmd VimResized * let s:currentWindowSize = [&lines, &columns]
 
 " command
 com! -narg=0 ZoomIn :call s:Zoom(1)
-com! -narg=0 ZoomOut :call s:Zoom(0)
+com! -narg=0 ZoomOut :call s:Zoom(-1)
 com! -narg=0 ZoomReset :call s:ZoomReset()
 
 " Zooming function
-function! s:Zoom(shouldIncrease)
+function! s:Zoom(amount)
   " regex to get current font
   let l:fsRegex = ':h\([^:]*\)'
 
@@ -29,11 +29,7 @@ function! s:Zoom(shouldIncrease)
   let l:fontSize = substitute(&guifont, '^.*' . l:fsRegex . '.*$', '\1', '')
 
   " increase or decrease font size
-  if (a:shouldIncrease)
-    let l:fontSize += 1
-  else
-    let l:fontSize -= 1
-  endif
+  let l:fontSize += a:amount
 
   " set new font size
   let &guifont = substitute(&guifont, l:fsRegex, ':h' . l:fontSize, '')
