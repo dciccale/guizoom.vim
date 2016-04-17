@@ -37,4 +37,4 @@ nmap <Leader>= :ZoomReset<CR>
 ```
 
 ## License
-See [LICENSE.txt](https://raw.github.com/dciccale/placeholder-enhanced/master/LICENSE.txt)
+http://denis.mit-license.org/
